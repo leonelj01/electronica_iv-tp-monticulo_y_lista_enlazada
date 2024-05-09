@@ -1,25 +1,20 @@
 #include <unity.h>
 #include "lista_enlazada.h"
+#include <string.h>
 
 static struct Datos{
     NodoListaEnlazada nodos[8];
     ListaEnlazada lista[1];
 }datos;
 
-enum Patrones{
-    PATRON_1 = 0xBAADBEEF,
-    PATRON_2 = 0xBEE5D00D,
-    PATRON_3 = 0xFEB0F0B1,
-    PATRON_4 = 0xABCBAF00
-};
 void setUp(void)
 {
-    const NodoListaEnlazada Nx={.cabeza=PATRON_1,.cola=(void*)PATRON_2};
-    datos = (struct Datos){.nodos={Nx,Nx,Nx,Nx,Nx,Nx,Nx,Nx},
-                           .lista={(void*)PATRON_3}};
+    memset(&datos,'X',sizeof datos);
 }
 
 void tearDown(void){}
+
+enum{PATRON_1=0xBADBEEF};
 
 static void test_listaVacia_esVacia(void)
 {
@@ -41,11 +36,11 @@ static void test_listaVacia_obtCabeza(void)
 {
     ListaEnlazada *const lista = datos.lista;
     int r;
-    int aux=PATRON_4;
+    int aux=PATRON_1;
     ListaEnlazada_inicializa(lista);
     r=ListaEnlazada_obtCabeza(lista,&aux);
     TEST_ASSERT_EQUAL_MESSAGE(-1,r,"La lista vacia no tiene cabeza");
-    TEST_ASSERT_EQUAL_MESSAGE(PATRON_4,aux,"No escribir basura en la variable");
+    TEST_ASSERT_EQUAL_MESSAGE(PATRON_1,aux,"No escribir basura en la variable");
 }
 static void test_listaVacia_obtCola(void)
 {
@@ -94,7 +89,7 @@ static void test_listaUnElemento_obtCabeza(void)
     ListaEnlazada *const lista = datos.lista;
     NodoListaEnlazada *const nodos = datos.nodos;
     int r;
-    int aux=PATRON_4;
+    int aux=PATRON_1;
     ListaEnlazada_inicializa(lista);
     NodoListaEnlazada_inicializa(nodos+0,1);
     ListaEnlazada_inserta(lista,nodos+0);
@@ -148,7 +143,7 @@ static void test_listaDosElementos_obtCabezaDeCola(void)
 {
     ListaEnlazada *const lista = datos.lista;
     NodoListaEnlazada *const nodos = datos.nodos;
-    int aux = PATRON_4;
+    int aux = PATRON_1;
     ListaEnlazada_inicializa(lista);
     NodoListaEnlazada_inicializa(nodos+0,1);
     NodoListaEnlazada_inicializa(nodos+1,2);
