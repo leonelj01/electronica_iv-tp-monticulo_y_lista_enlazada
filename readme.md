@@ -125,6 +125,10 @@ para ejecutar las pruebas en el hardware.
 
 ## Referencias
 
+- Aho, A.V., Hopcroft, J.E. y Ullman, J.D. (1988) *Estructuras de datos y algoritmos*. Addison-Wesley Iberoamericana.
+- Joyanes Aguilar,L y Zahonero Martínez,I. (2002) *Programación en C*.McGraw-Hill.
+- Joyanes Aguilar,L y Zahonero Martínez,I. (2005) *Programación en C, segunda edición*. McGraw-Hill.
+
 [TE.MD]: estudio_teórico.md
 [PR.MD]: memoria_de_diseño.md
 [icono-consola]: figs/readme-fig1.png
