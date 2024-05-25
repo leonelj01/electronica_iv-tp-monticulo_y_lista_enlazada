@@ -10,8 +10,7 @@
  * @param celdas 
  * @param numCeldas 
  */
-void Monticulo_inicializa(
-        Monticulo *m,int *celdas,int numCeldas,TipoMonticulo tipo)
+void Monticulo_inicializa(Monticulo *m,int *celdas,int numCeldas,TipoMonticulo tipo)
 {
     (void)m,(void)celdas,(void)numCeldas,(void)tipo;
 }
