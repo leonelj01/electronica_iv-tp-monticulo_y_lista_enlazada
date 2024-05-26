@@ -4,7 +4,7 @@
 
 void NodoListaEnlazada_inicializa(NodoListaEnlazada *nodo,int valor)
 {
-    (void)nodo,(void)valor;
+    nodo->dato = valor;
 }
 void ListaEnlazada_inicializa(ListaEnlazada *lista)
 {

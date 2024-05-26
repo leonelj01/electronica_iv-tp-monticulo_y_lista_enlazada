@@ -1,6 +1,6 @@
 # Memoria de Diseño, Tipos de Dato Abstractos Montículo y Lista Vinculada
 
-Autor: *nombre*
+Autor: *Juarez, Gustavo Leonel*
 
 > Completa a medida que realizas el desarrollo, describiendo las estructuras de
 datos y las operaciones (estas últimas en sus correspondientes secciones). Usar
@@ -33,3 +33,4 @@ citas y referencias estilo APA.
 ### 2.5 Operacion *tomaTope*
 
 ## Referencias
++ *Joyanes Aguilar,L y Zahonero Martínez,I. (2005) Programación en C, segunda edición. McGraw-Hill.*

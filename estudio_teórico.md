@@ -14,6 +14,29 @@ los montículos binarios de máximo y de mínimo. Explica las operaciones básic
 de inserción de un nuevo dato y remoción del máximo o mínimo. Describe la
 implementación de un montículo binario utilizando un arreglo.
 
+Para lograr definir que es un *`Montículo binario`*, en primer lugar debemos conocer el concepto
+de *Árbol* y **Árbol binario**.
+
+Un *"Árbol"* es una estructura de datos muy importante en informática y en ciencias de la computación. Los arboles son estructuras no lineales, al contrario que los *array* y las *listas enlazadas*, que constituyen estructuras lineales. De forma intuitiva tenemos que el concepto de arbol implica una estructura en la cual los datos se organizan de modo que los elementos de información están relacionadaos entre sí a través de ramas.
+
+Entonces en una estructura de datos *"un Árbol consta de un conjunto finito de elementos, denominados **nodos**, y un conjunto finito de lineas dirigidas, denominadas ramas, que conectan los nodos. El número de ramas asociado con un nodo es el grado del nodo"*(Jhoanes Aguilar,Zahonero Martinez, 2005).
+
+En un *Árbol*, dependiendo de la posicion de los nodos, se pueden denominar de formas diferentes. Por ejemplo, el primer nodo de un *Árbol* que no está vacío se llama raíz. Entonces, un nodo puede ser considerado como *"padre"* si tiene nodos sucesores, los cuales son considerados como *"hijos"*. Al recorrer el *Árbol* podemos denominar como *"descendencia"* a los hijos de un nodo y como *"ascendencia"* a los *"padres" o "abuelos"* de un nodo. Por ultimo, de denomina el nivel de un nodo como la distancia entre este y la raíz, es decir, la cantidad de nodos entre estos.
+
+Decimos que un *"Árbol"* está equilibrado cuando, dado un número máximo de *k* hijos para cada nodo y síendo la altura del árbol *h*. cada nodo de nivel *l < h - 1* tiene exactamente *k* hijos. El árbol está equilibrado perfectamente cuando cada nodo de nivel *l < h* tiene exactamente *k* hijos.
+
+*Árbol binario: "Un árbol binario es un árbol en el que ningún nodo puede tener más de dos "hijos". En este, cada nodo puede tener cero, uno o dos "hijos". Se conoce el nodo de la izquierda como hijo izquierdo y el de la derecha como hijo derecho."*(Jhoanes Aguilar,Zahonero Martinez, 2005).
+
+![](figuras/Arbol_binario.png)
+
+*Figura 1: Árbol binario completamente balanceado.*
+
+Otra caracteristica que tienen los Arboles es que la Raíz no necesariamente es el maximo, tambien pueden ser el minimo dando lugar a un arbol invertido.
+
+Luego de haber definido el concepto de *"árbol"* y de *árbol binario*, podemos determinar que es lo que se conoce como *`Montículo binario`*, pues *"un `Montículo binario` de tamaño n se define como un árbol binario casi completo de n nodos, tal que el contenido de cada nodo es menor o igual que el contenido de sus hijos."*(Jhoanes Aguilar,Zahonero Martinez, 2005).
+
+
+
 ## Lista enlazada
 
 > Define el concepto de *lista enlazada*. Explica como está constituida una
