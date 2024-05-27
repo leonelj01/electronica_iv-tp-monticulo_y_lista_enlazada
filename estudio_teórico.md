@@ -1,6 +1,6 @@
 # Estructuras de datos Montículo y Lista Enlazada
 
-> Autor
+> ***Juarez, Gustavo Leonel***
 
 ## Introducción
 
@@ -29,11 +29,17 @@ Decimos que un *"Árbol"* está equilibrado cuando, dado un número máximo de *
 
 ![](figuras/Arbol_binario.png)
 
-*Figura 1: Árbol binario completamente balanceado.*
+>*Figura 1: Árbol binario completamente balanceado.*
 
 Otra caracteristica que tienen los Arboles es que la Raíz no necesariamente es el maximo, tambien pueden ser el minimo dando lugar a un arbol invertido.
 
 Luego de haber definido el concepto de *"árbol"* y de *árbol binario*, podemos determinar que es lo que se conoce como *`Montículo binario`*, pues *"un `Montículo binario` de tamaño n se define como un árbol binario casi completo de n nodos, tal que el contenido de cada nodo es menor o igual que el contenido de sus hijos."*(Jhoanes Aguilar,Zahonero Martinez, 2005).
+
+A diferencia del *árbol binario*, el *`Montículo binario`* tiene la particularidad que su raíz es el máximo o el mínimo de los nodos que lo conforman, dependiendo de que clase de monticulo se realice (monticulos de maximo o monticulos de minimos), de igual forma los *"padres"* deben cumplir esta condición con sus respectivos *"hijos"*. Además, el *"hijo de la izquierda"* debe ser menor que el *"padre"*, en cambio el *"hijo de la derecha"* debe ser mayor que el *"padre"*. Entonces, a la hora de insertar o quitar algun elemento del montículo se debe comprobar que ésta condicion se cumpla para los nuevos y antiguos elementos.
+
+Por otro lado, el montículo tiene la particularidad que sus elementos pueden ser ubicados en un arreglo de manera tal que se recorre el *árbol* de izquierda a derecha y de ésta misma forma se van colocando los elementos en el arreglo.
+
+![](figuras/Monticulo_binario.png)
 
 
 
@@ -63,7 +69,7 @@ La idea basica de una *`Lista Enlazada`* consiste en construir una lista cuyos e
 
 ![](figuras/Lista_repres_simp.png)
 
-*Figura 3: `Lista Enlazada`(representación simple)*
+>*Figura 3: `Lista Enlazada`(representación simple)*
 
 Las *`Lista Enlazada`* se pueden dividir en cuatro categorias:
 - *Listas simplemente enlazadas*
@@ -83,4 +89,5 @@ encuentra el puntero al siguiente nodo.
 de la estructura y el segundo esta vacío, pues no existe un siguiente elemento.
 
 ![](figuras/lista_enlazada.png)
+>*Figura 4: Representación completa de una lista enlazada*
 

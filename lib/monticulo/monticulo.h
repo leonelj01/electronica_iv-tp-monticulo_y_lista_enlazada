@@ -10,8 +10,9 @@ typedef  enum TipoMonticulo{
 }TipoMonticulo;
 
 typedef struct Monticulo{
-/*COMPLETAR*/
-
+    int v[Monticulo_MAXIMO + 1];     // Es un array que encierra secuencialmente al montículo.
+    int maxNodos;                   // Es el maximo de nodos.
+    int n;                          // Es el numero actual.
 }Monticulo;
 
 

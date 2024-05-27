@@ -12,6 +12,18 @@
  */
 void Monticulo_inicializa(Monticulo *m,int *celdas,int numCeldas,TipoMonticulo tipo)
 {
+    if (tipo == Monticulo_MAXIMO)
+    {
+        m->v[*celdas] = 0;
+        m->maxNodos = numCeldas;
+        m->n = *celdas;
+    }else{
+        m->v[*celdas] = NULL;
+        m->maxNodos = numCeldas;
+        m->n = *celdas;
+    }
+    
+
     (void)m,(void)celdas,(void)numCeldas,(void)tipo;
 }
 /**
