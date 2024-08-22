@@ -2,39 +2,56 @@
 #include <stddef.h>
 #include <stdbool.h>
 
-void NodoListaEnlazada_inicializa(NodoListaEnlazada *nodo,int valor)
+void NodoListaEnlazada_inicializa(NodoListaEnlazada *nodo, int valor)
 {
     nodo->dato = valor;
+    nodo->enlace = NULL;
 }
+
 void ListaEnlazada_inicializa(ListaEnlazada *lista)
 {
-    (void)lista;
+    *lista = NULL;
 }
+
 void ListaEnlazada_inserta(ListaEnlazada *lista, NodoListaEnlazada *nodo)
 {
-    (void)lista,(void)nodo;
+    nodo->enlace = *lista;
+    *lista = nodo;
 }
+
 NodoListaEnlazada *ListaEnlazada_obtNodoCabeza(ListaEnlazada *lista)
 {
-    (void)lista;
-    return NULL;
+    return *lista;
 }
+
 bool ListaEnlazada_esVacia(ListaEnlazada *lista)
 {
-    (void)lista;
-    return true;
+    return *lista == NULL;
 }
+
 int ListaEnlazada_obtCabeza(ListaEnlazada *lista, int *valor)
 {
-    (void)lista,(void)valor;
-    return -1;
+    if (*lista == NULL) {
+        return -1;
+    }
+    *valor = (*lista)->dato;
+    return 0;
 }
+
 ListaEnlazada *ListaEnlazada_obtCola(ListaEnlazada *lista)
 {
-    return lista;
+    if (*lista == NULL) {
+        return lista;
+    }
+    return &((*lista)->enlace);
 }
+
 NodoListaEnlazada *ListaEnlazada_remueveCabeza(ListaEnlazada *lista)
 {
-    (void)lista;
-    return NULL;
+    if (*lista == NULL) {
+        return NULL;
+    }
+    NodoListaEnlazada *nodoRemovido = *lista;
+    *lista = (*lista)->enlace;
+    return nodoRemovido;
 }

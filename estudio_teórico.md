@@ -7,6 +7,8 @@
 > Aquí, citando fuentes bibliográficas, define `Estructura de Dato`,
 `Tipo de dato` y `tipo de dato abstracto`.
 
+
+
 ## Montículo binario
 
 > Define los conceptos de *arbol binario* y *montículo binario*. Describe
